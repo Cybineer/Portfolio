@@ -9,8 +9,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="default.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
@@ -20,6 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@500&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="default.css">
+
+    <link id="theme-style" rel="stylesheet" type="text/css" href="">
 
 </head>
 <body>
@@ -47,10 +48,8 @@
                     
          
                     <div id="theme-option-wrapper">
-                        <div id="light-mode" class="theme-dot"></div>
-                        <div id="blue-mode" class="theme-dot"></div>
-                        <div id="green-mode" class="theme-dot"></div>
-                        <div id="dark-mode" class="theme-dot"></div>
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        <div data-mode="dark" id="dark-mode" class="theme-dot"></div>
                     </div>
 
                     
@@ -138,7 +137,7 @@
                             <h6 class="post-title">Text Based Adventure Game</h6>
                             <p class="post-intro">This is an adventure game where based of the choices given to you by the game
                                 you will either survive and collect your treasure or parish.</p>
-                            <a target="_blank" href="a">Click for more details and Source Code</a>
+                            <a target="_blank" href="post.html">Click for more details and Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -189,5 +188,8 @@
             </form>
         </div>
     </section>
+
+    <script type="text/javascript" src="modes.js"></script>
+
 </body>
 </html>
