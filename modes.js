@@ -1,4 +1,13 @@
 
+let theme = localStorage.getItem("theme")
+
+if(theme == null){
+    setTheme("light")
+}else{
+    setTheme(theme)
+}
+
+
 
 let themeDots = document.getElementsByClassName("theme-dot")
 
@@ -22,6 +31,8 @@ function setTheme(mode){
         document.getElementById("theme-style").href = "darkmode.css"
     }
 
+
+    localStorage.setItem("theme", mode)
 }
 
 
