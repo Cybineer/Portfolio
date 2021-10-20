@@ -1,0 +1,241 @@
+:root{
+    --mainColor: #c2c2c2c7;
+    --secondaryColor: #FFFFFF;
+
+    --borderColor: #c1c1c1;
+
+    --mainText: black;
+    --secondaryText: #3f3f3f;
+
+    --themeDotBorder: #0E3751;
+
+    /* to get a transparent color use rgba. the (a) determines 
+    how transparent the color will be*/
+
+    --previewBg: rgba(91, 213, 249, 0.5);
+
+    --previewShadow: #23C8FA;
+
+    --buttonColor: black;
+
+}
+
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body *{
+    transition: 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+    color: var(--mainText);
+    font-family: 'Playball', cursive;
+}
+
+
+p, li, span, label, input, textarea{
+    color: var( --secondaryText);
+    font-family: 'STIX Two Text', serif;
+}
+
+a{
+    text-decoration: none;
+    color: #C9007D;
+}
+
+ul{
+    list-style: none;
+}
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+.intro-wrapper{
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    border-radius:5px 5px 0 0 ;
+
+    -webkit-box-shadow: 22px 6px 8px 11px #257599; 
+    box-shadow: 22px 6px 8px 11px #257599;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "nav-wrapper  nav-wrapper"
+        "left-column right-column"
+    
+    ;
+
+}
+
+
+.nav-wrapper{
+    border-radius:5px 5px 0 0 ;
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--borderColor) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--mainColor)
+}
+
+#navigation a{
+    color: var(--mainText);
+}
+
+
+
+#navigation{
+    margin: 0;
+    padding: 10px;
+}
+
+
+#navigation li{
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.dots-wrapper{
+    display: flex;
+    padding: 10px;
+}
+
+#dot1{
+    background-color: #93045D;
+    -webkit-box-shadow: -17px 6px 8px 1px #93045D; 
+    box-shadow: -12px 6px 8px 1px #93045D;
+}
+
+#dot2{
+    background-color: #f3d007;
+    -webkit-box-shadow: -17px 6px 8px 1px #f3d007; 
+    box-shadow: -12px 6px 8px 1px #f3d007;
+}
+
+#dot3{
+    background-color: #049328df;
+    -webkit-box-shadow: -17px 6px 8px 1px #049328df; 
+    box-shadow: -12px 6px 8px 1px #049328df;
+}
+
+.browser-dot{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius:50%;
+    margin: 10px;
+
+
+}
+
+
+.post{
+    border: 1px solid var(--borderColor);
+    -webkit-box-shadow: -17px 6px 8px 1px #151B55; 
+    box-shadow: -17px 6px 8px 1px #151B55;
+}
+
+
+.link-style{
+    text-align: center;
+    word-spacing: 100px;
+    font-size: 20px;
+}
+
+.post-thumb-nail{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 10px;
+
+}
+
+
+.post1-post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap:20px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+#contact-form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borderColor);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    margin-bottom: 50px;
+}
+
+#contact-form label{
+    line-height: 2.7em;
+}
+
+#contact-form textarea{
+    min-height: 100px;
+    font-size: 14px;
+}
+
+.input-field{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--secondaryColor);
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    font-size: 14px;
+}
+
+#submit-button{
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: var(--buttonColor);
+    border: none;
+}
+
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%;
+    
+    }
+}
+
+@media screen and (max-width: 800px){
+    .intro-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "nav-wrapper"
+            "left-column"
+            "right-column"
+        
+        ;
+    
+    }
+
+    .right-column{
+        justify-content: center;
+        }
+}
